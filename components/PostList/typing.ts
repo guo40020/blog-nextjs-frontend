@@ -3,6 +3,7 @@ export interface IPostPreview {
   dateTime: number;
   contentPreview: string;
   tags: string;
+  postId: string;
 }
 
 export interface IPostList {
