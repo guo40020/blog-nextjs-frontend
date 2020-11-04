@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import "~highlight.js/styles/dracula.css";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 html,
 body {
@@ -18,4 +20,14 @@ a {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+code {
+  padding: 1px 5px;
+  margin: 0 .3rem 0 0;
+  background: #272822;
+  line-height: 2rem;
+  border-radius: 3px;
+  color: whitesmoke;
+  font-family: 'Fira Code', monospace;
 }

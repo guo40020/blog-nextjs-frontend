@@ -1,7 +1,7 @@
 export interface IPostPreview {
   title: string;
   dateTime: number;
-  contentPreview: string;
+  description: string;
   tags: string;
   postId: string;
 }

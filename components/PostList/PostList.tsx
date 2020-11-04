@@ -6,7 +6,7 @@ import PostListItem from "./PostListItem";
 export default function PostList({ posts }: IPostList) {
   const postAvailable = posts.length > 0;
   return (
-    <div className={ style.postListRoot } style={ { display: !postAvailable ? 'flex' : 'block' } }>
+    <div className={ style.postListRoot } style={ { flexDirection: postAvailable ? 'column' : 'initial' } }>
       {
         postAvailable ?
           posts.map((v, i) => {
