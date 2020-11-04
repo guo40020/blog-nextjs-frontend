@@ -3,7 +3,7 @@ export interface IPostPreview {
   dateTime: number;
   description: string;
   tags: string;
-  postId: string;
+  id: string;
 }
 
 export interface IPostList {

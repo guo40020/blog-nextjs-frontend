@@ -17,5 +17,5 @@ export default function ContentContainer({ content }) {
     contentRef.current.innerHTML = marked(content);
   }, []);
 
-  return <div ref={ contentRef }/>;
+  return <div style={ { overflowWrap: 'break-word' } } ref={ contentRef }/>;
 }

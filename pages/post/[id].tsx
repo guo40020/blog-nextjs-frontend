@@ -31,7 +31,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch(`${ API_ROOT }/get_post`, {
     method: 'POST',
-    body: JSON.stringify({ id: context.params.id })
+    body: JSON.stringify({ id: context.params.id }),
+    headers: {
+      "content-type": 'application/json'
+    }
   });
   const data = await res.json();
 

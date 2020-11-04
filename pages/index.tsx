@@ -4,7 +4,7 @@ import PostList from "../components/PostList/PostList";
 import { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('http://localhost:7001/get_posts')
+  const res = await fetch(`http://localhost:7001/get_posts?page=1`)
   const data = await res.json();
   console.log(res);
   return {
