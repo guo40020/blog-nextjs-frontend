@@ -12,7 +12,7 @@ export default function PostListItem({ title, description, tags, id }: IPostPrev
       <div className={ style.bottomContainer }>
         {
           tags.split(' ').map((v, i) => (
-            <div key={ i } className={ style.tags }>{ v }</div>
+            v != '' ? <div key={ i } className={ style.tags }>{ v }</div> : null
           ))
         }
       </div>
