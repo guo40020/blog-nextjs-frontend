@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../../components/common/nav/Nav";
-import { GetStaticPaths, GetStaticProps, GetServerSideProps } from "next";
+import { GetServerSideProps } from "next";
 import { API_ROOT } from "../../config";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import style from './postPage.module.scss';
@@ -16,7 +16,7 @@ export interface IPostDetail {
   description: string;
 }
 
-export const getStaticProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const res = await fetch(`${ API_ROOT }/get_post`, {
     method: 'POST',
     body: JSON.stringify({ id: context.params.id }),
