@@ -30,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       ...data,
     },
-    revalidate: 1,
   };
 };
 
