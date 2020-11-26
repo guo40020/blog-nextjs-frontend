@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../../components/common/nav/Nav";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, GetServerSideProps } from "next";
 import { API_ROOT } from "../../config";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import style from './postPage.module.scss';
@@ -16,25 +16,13 @@ export interface IPostDetail {
   description: string;
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await fetch(`${ API_ROOT }/get_all_ids`);
-  const ids = await data.json() as IIdList;
-
-  return {
-    paths: ids.ids.map((v) => {
-      return { params: { id: v } };
-    }),
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetServerSideProps = async (context) => {
   const res = await fetch(`${ API_ROOT }/get_post`, {
     method: 'POST',
     body: JSON.stringify({ id: context.params.id }),
     headers: {
       "content-type": 'application/json'
-    }
+    },
   });
   const data = await res.json();
 
