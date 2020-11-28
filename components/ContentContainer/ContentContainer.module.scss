@@ -2,12 +2,13 @@
   overflow-wrap: break-word;
 
   h1, h2 {
-    padding-bottom: .1rem;
-    margin-bottom: .5rem;
+    padding: 0 0 .3rem .3rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid #d6d6d6;
   }
 
   p {
+    padding-left: .3rem;
     margin-bottom: 1rem;
   }
 }

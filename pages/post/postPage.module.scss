@@ -10,7 +10,7 @@
 
   .readingPart {
     max-width: 1000px;
-    height: calc(100vh - 4rem - 4px);
+    min-height: calc(100vh - 4rem - 4px);
     background: white;
     width: 100%;
 
@@ -55,7 +55,6 @@
 
     .content {
       min-height: 60vh;
-      border-top: 1px solid lightgrey;
       padding: 1rem;
       @media screen and (min-width: 750px) {
         margin: 3rem 10%;
