@@ -40,7 +40,7 @@ export default function PostPage({ title, description, content }: IPostDetail) {
 
     <div>
       <Head>
-        <title>{ { title } }</title>
+        <title>{ title }</title>
       </Head>
       <Nav/>
 
