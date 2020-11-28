@@ -9,7 +9,7 @@ export default function Nav() {
         <a>
           <div className={ style.left }>
             <img
-              src="https://avatars3.githubusercontent.com/u/19303341?s=460&u=b4b50f08dda14b1d90d98597310c00c531ba192c&v=4"
+              src="/avatar.jpg"
               alt="avatar"/>
             <p className={ style.name }>Kelly</p>
             <p className={ style.smallText }>无聊的消遣地</p>

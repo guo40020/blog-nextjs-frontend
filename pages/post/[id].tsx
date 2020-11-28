@@ -4,6 +4,7 @@ import { GetServerSideProps } from "next";
 import { API_ROOT } from "../../config";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import style from './postPage.module.scss';
+import Head from "next/head";
 
 // API Data structure
 export interface IIdList {
@@ -38,6 +39,9 @@ export default function PostPage({ title, description, content }: IPostDetail) {
   return (
 
     <div>
+      <Head>
+        <title>{ { title } }</title>
+      </Head>
       <Nav/>
 
       <div className={ style.postPageRoot }>

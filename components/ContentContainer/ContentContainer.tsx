@@ -1,6 +1,7 @@
 import React, { createRef, useEffect } from "react";
 import hljs from "highlight.js";
 import marked from "marked";
+import style from "./ContentContainer.module.scss";
 
 export default function ContentContainer({ content }) {
   const contentRef = createRef<HTMLDivElement>();
@@ -17,5 +18,5 @@ export default function ContentContainer({ content }) {
     contentRef.current.innerHTML = marked(content);
   }, []);
 
-  return <div style={ { overflowWrap: 'break-word' } } ref={ contentRef }/>;
+  return <div className={ style.content } ref={ contentRef }/>;
 }
