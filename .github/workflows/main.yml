@@ -30,7 +30,7 @@ jobs:
         run: docker build . --tag guo40020/blog-frontend
       
       - name: login to docker
-        uses: docker/login-action
+        uses: docker/login-action@v1.6.0
         with: 
           username: guo40020
           password: ${{ secrets.DOCKER_PASSWORD }}
